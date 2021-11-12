@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-header {
+    background-image: url('https://cdn.cnn.com/cnnnext/dam/assets/160928122441-london-late-night-eats---balans-cafe-high-society-eggs-benedict-super-169.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.sub-section-header {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 28, 53, 0.5);
+}
+
+.header-line {
+    display: flex;
+    justify-content: space-between;
+    height: 53px;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.logo {
+    padding: 0 15px;
+}
+.logo img {
+    width: 40px;
+    height: 30px;
+}
+
+.menu-header ul {
+    list-style: none;
+    display: flex;
+    padding: 0 15px;
+}
+
+.menu-header ul li {
+    margin-left: 20px;
+}
+
+.menu-header ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.main-section-header {
+    width: 100%;
+    height: auto;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+.logo-main-header img{
+    width: 140px;
+}
+
+.pesquisa-section-header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.main-section-header p {
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.pesquisa-section-header select,
+.pesquisa-section-header button{
+    margin: 0 5px;
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid #FFF;
+}
+
+.pesquisa-section-header button {
+    background-color: #4CAF50;
+    color: #FFF;
+    border: 1px solid #4CAF50;
+}

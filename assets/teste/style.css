@@ -1,0 +1,13 @@
+.titulo {
+    color: #FFF;
+    text-transform: capitalize;
+}
+
+#post {
+    background-color: #555;
+    color: #FFF;
+}
+
+.img {
+    width: 100px;
+}
