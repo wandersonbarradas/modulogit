@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <title>Delivery DL</title>
 </head>
+
 <body>
     <section class="section-header">
         <div class="sub-section-header">
@@ -15,11 +17,15 @@
                     <div class="logo">
                         <a href=""><img src="assets/Icons/home.png" alt="home"></a>
                     </div>
-                    <button class="menu" onclick="menuShow(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <button class="menu"
+                        onclick="menuShow(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                        aria-label="Main Menu">
                         <svg width="50" height="50" viewBox="0 0 100 100">
-                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line1"
+                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                             <path class="line line2" d="M 20,50 H 80" />
-                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            <path class="line line3"
+                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                         </svg>
                     </button>
                     <div class="menu-header">
@@ -29,6 +35,7 @@
                             <li><a href="">Influenciadores Digitais</a></li>
                             <li><a href="">Compartilh Com Seus Amigos</a></li>
                         </ul>
+                    </div>
                 </div>
             </header>
             <div class="main-section-header">
@@ -37,7 +44,7 @@
                 </div>
                 <h1>Procurando <span>Restaurantes</span>?</h1>
                 <p>os melhores cardápios estão aqui. Descubra!</p>
-                <div class="pesquisa-section-header"> 
+                <div class="pesquisa-section-header">
                     <select name="pesquisa" id="pesquisa">
                         <option value="demerval-lobao">Demerval Lobão</option>
                         <option value="lagoa">Lagoa do Piaui</option>
@@ -57,7 +64,7 @@
         </div>
         <div class="models">
             <div class="container-res">
-                <a href="#">
+                <a href="">
                     <div class="box-img">
                         <img src="--" alt="">
                     </div>
@@ -69,17 +76,73 @@
                         <div class="status-res"></div>
                     </div>
                 </a>
-            </div>            
+            </div>
         </div>
-        <div class="container-cadastros">
-
-        </div>
-
+        <div class="container-cadastros"></div>
     </section>
-    
+    <div class="modal-res">
+        <div class="capa-modal">
+            <div class="sub-capa-modal">
+                <div class="header-line-modal">
+                    <div class="bt-voltar">
+                        <a href="">Voltar</a>
+                    </div>
+                    <button class="menu"
+                        onclick="menuShow(), this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                        aria-label="Main Menu">
+                        <svg width="50" height="50" viewBox="0 0 100 100">
+                            <path class="line line1"
+                                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3"
+                                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                        </svg>
+                    </button>
+                    <div class="menu-header">
+                        <ul>
+                            <li><a href="">Inicio</a></li>
+                            <li><a href="">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-main-modal">
+                    <div class="logo-main-header">
+                        <img class="logo-res-modal" src="--" alt="">
+                    </div>
+                    <div class="nome-res-modal"></div>
+                    <div class="status-res"></div>
+                    <div class="info-res-modal">
+                        <div class="horario-res-modal">
+                            <div class="horaio-res-modal--icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="horario-res-modal--loc">Ver Horários</div>
+                        </div>
+                        <div class="local-res-modal">
+                            <div class="local-res-modal--icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="local-res-modal--loc">Ver Endereços</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
     <script src="assets/scripts/restaurantes.js"></script>
     <script src="assets/scripts/script.js"></script>
 </body>
+
 </html>
