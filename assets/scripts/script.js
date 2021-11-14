@@ -62,6 +62,16 @@ function menuShow() {
   }
 }
 
+c(".menu-header-modal ul").style.right = "-100vw";
+
+function menuModalShow() {
+  if (c(".menu-header-modal ul").style.right === "-100vw") {
+    c(".menu-header-modal ul").style.right = "0px";
+  } else {
+    c(".menu-header-modal ul").style.right = "-100vw";
+  }
+}
+
 function abrirModalRes() {
   c(".section-header").style.opacity = "0";
   c(".restaurantes").style.opacity = "0";

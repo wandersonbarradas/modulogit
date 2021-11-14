@@ -267,6 +267,25 @@ body {
   color: #fff;
 }
 
+.menu-header-modal ul {
+}
+
+.menu-header-modal ul {
+  list-style: none;
+  display: flex;
+  padding: 0 15px;
+}
+
+.menu-header-modal ul li {
+  margin-left: 20px;
+}
+
+.menu-header-modal ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
 .content-main-modal {
   width: 100%;
   height: auto;
@@ -373,6 +392,46 @@ body {
     display: block;
     padding: 10px;
   }
+
+  .menu-header-modal ul {
+    background-color: #000;
+    width: 50vw;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    padding-right: 50px;
+    position: absolute;
+    top: 0;
+    right: -100vw;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .content-main-modal {
+    padding-top: 10%;
+  }
+}
+
+@media (max-width: 650px) {
+  .content-main-modal {
+    padding-top: 8%;
+  }
+
+  .nome-res-modal {
+    font-size: 30px;
+    margin-top: 5px;
+  }
+
+  .capa-modal {
+    height: 60vh;
+  }
+
+  .logo-main-header img {
+    width: 120px;
+  }
+
+  .info-res-modal {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -387,12 +446,22 @@ body {
     align-items: center;
     justify-content: center;
   }
+
   .container-res--info {
     padding: 0;
     text-align: center;
   }
+
   .menu-header ul {
     width: 100vw;
+  }
+
+  .menu-header-modal ul {
+    width: 100vw;
+  }
+
+  .content-main-modal {
+    padding-top: 15%;
   }
 }
 
@@ -409,8 +478,23 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .info-res-modal {
+    flex-direction: column;
+  }
+
+  .horario-res-modal {
+    margin-bottom: 0px;
+  }
+}
+
 @media (max-width: 300px) {
   .main-section-header h1 {
     font-size: 15px;
+  }
+
+  .nome-res-modal {
+    font-size: 25px;
+    margin-bottom: 5px;
   }
 }
