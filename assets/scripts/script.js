@@ -39,6 +39,7 @@ restaurante.map((item, index) => {
     load();
     c(".modal-res").style.opacity = "0";
     c(".modal-res").style.display = "block";
+    c(".header-line-modal").classList.remove("menu-fixed");
     setInterval(() => {
       c(".container-animation").style.display = "none";
       c(".modal-res").style.opacity = "1";
