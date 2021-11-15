@@ -1,19 +1,6 @@
 let c = (el) => document.querySelector(el);
 let cs = (el) => document.querySelectorAll(el);
 
-async function carregarinicio() {
-  c(".section-header").style.display = "none";
-  c(".restaurantes").style.display = "none";
-  c(".container-animation").style.display = "flex";
-  await setInterval(() => {
-    c(".container-animation").style.display = "none";
-    c(".section-header").style.display = "block";
-    c(".restaurantes").style.display = "block";
-  }, 6000);
-}
-
-carregarinicio();
-
 let modalkey = 0;
 
 restaurante.map((item, index) => {
@@ -49,10 +36,9 @@ restaurante.map((item, index) => {
     );
 
     ocultarInicio();
-    c(".container-animation").style.display = "flex";
+    load();
     c(".modal-res").style.opacity = "0";
     c(".modal-res").style.display = "block";
-
     setInterval(() => {
       c(".container-animation").style.display = "none";
       c(".modal-res").style.opacity = "1";
@@ -93,13 +79,13 @@ function menuModalShow() {
   }
 }
 
-/*function abrirModalRes() {
+function abrirModalRes() {
   c(".modal-res").style.opacity = "0";
   c(".modal-res").style.display = "block";
   setInterval(() => {
     c(".modal-res").style.opacity = "1";
   }, 2000);
-}*/
+}
 
 function ocultarInicio() {
   c(".section-header").style.opacity = "0";
@@ -107,5 +93,13 @@ function ocultarInicio() {
   setInterval(() => {
     c(".section-header").style.display = "none";
     c(".restaurantes").style.display = "none";
+  }, 500);
+}
+
+function load() {
+  c(".container-animation").style.opacity = "0";
+  c(".container-animation").style.display = "flex";
+  setInterval(() => {
+    c(".container-animation").style.opacity = "1";
   }, 500);
 }

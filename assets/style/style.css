@@ -242,7 +242,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 70vh;
+  height: 85vh;
 }
 
 .sub-capa-modal {
@@ -309,6 +309,7 @@ body {
 .info-res-modal {
   display: flex;
   font-size: 14px;
+  margin-top: 15px;
 }
 
 .local-res-modal,
@@ -317,7 +318,6 @@ body {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  margin: 10px;
 }
 
 .h-6 {
@@ -409,26 +409,35 @@ body {
   }
 
   .content-main-modal {
-    padding-top: 10%;
+    padding-top: 50px;
+  }
+
+  .nome-res-modal {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .capa-modal {
+    height: 65vh;
+  }
+
+  .nome-res-modal {
+    font-size: 24px;
+  }
+
+  .content-main-modal {
+    padding-top: 30px;
+  }
+
+  .info-res-modal {
+    margin-top: 15px;
   }
 }
 
 @media (max-width: 650px) {
-  .content-main-modal {
-    padding-top: 8%;
-  }
-
-  .nome-res-modal {
-    font-size: 30px;
-    margin-top: 5px;
-  }
-
-  .capa-modal {
-    height: 50vh;
-  }
-
   .logo-main-header img {
-    width: 120px;
+    width: 130px;
   }
 }
 
@@ -436,9 +445,7 @@ body {
   .section-header {
     height: 50vh;
   }
-}
 
-@media (max-width: 550px) {
   .container-res a {
     flex-direction: column;
     align-items: center;
@@ -456,10 +463,6 @@ body {
 
   .menu-header-modal ul {
     width: 100vw;
-  }
-
-  .content-main-modal {
-    padding-top: 15%;
   }
 }
 
