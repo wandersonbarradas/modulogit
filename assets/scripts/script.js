@@ -39,9 +39,9 @@ restaurante.map((item, index) => {
     load();
     c(".modal-res").style.opacity = "0";
     c(".modal-res").style.display = "block";
-    c(".header-line-modal").classList.remove("menu-fixed");
     setInterval(() => {
       c(".container-animation").style.display = "none";
+      subirTela();
       c(".modal-res").style.opacity = "1";
     }, 3000);
   });
@@ -103,4 +103,10 @@ function load() {
   setInterval(() => {
     c(".container-animation").style.opacity = "1";
   }, 500);
+}
+
+function subirTela() {
+  window.scrollTo({
+    top: 0,
+  });
 }
