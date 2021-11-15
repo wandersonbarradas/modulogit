@@ -427,7 +427,7 @@ body {
   }
 
   .content-main-modal {
-    padding-top: 30px;
+    padding-top: 50px;
   }
 
   .info-res-modal {
@@ -470,9 +470,7 @@ body {
   .nome-res-modal {
     font-size: 20px;
   }
-  .content-main-modal {
-    padding-top: 30px;
-  }
+
   .main-section-header p {
     display: none;
   }
