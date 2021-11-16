@@ -46,11 +46,11 @@
                 <p>os melhores cardápios estão aqui. Descubra!</p>
                 <div class="pesquisa-section-header">
                     <select name="pesquisa" id="pesquisa">
-                        <option value="demerval-lobao">Demerval Lobão</option>
-                        <option value="lagoa">Lagoa do Piaui</option>
-                        <option value="monsenhor-gil">Monsenhor Gil</option>
+                        <option value="demerval lobão - pi">Demerval Lobão</option>
+                        <option value="lagoa do piaui">Lagoa do Piaui</option>
+                        <option value="monsenhor gil - pi">Monsenhor Gil</option>
                     </select>
-                    <button>Pesquisar</button>
+                    <a href="#title-res"><button onclick="pesquisaCidade()">Pesquisar</button></a>
                 </div>
                 <div class="box-googleplay">
 
@@ -59,14 +59,14 @@
         </div>
     </section>
     <section class="restaurantes">
-        <div class="title-res">
+        <div id="title-res" class="title-res">
             <h3>Restaurantes mais populares</h3>
         </div>
         <div class="models">
             <div class="container-res">
                 <a href="">
                     <div class="box-img">
-                        <img src="--" alt="">
+                        <img id="img-default" src="--" alt="">
                     </div>
                     <div class="container-res--info">
                         <div class="name-res"></div>
@@ -79,6 +79,7 @@
             </div>
         </div>
         <div class="container-cadastros"></div>
+        <div class="container-cadastros-pesquisados"></div>
     </section>
     <div class="modal-res">
         <div class="capa-modal">
@@ -157,6 +158,7 @@
 
     <script src="assets/scripts/restaurantes.js"></script>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/pesquisaCidade.js"></script>
 </body>
 
 </html>

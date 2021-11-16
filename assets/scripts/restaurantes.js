@@ -31,7 +31,7 @@ let restaurante = [
       rua: "Av. Francisco Luis de Morais",
       numero: "1305",
       bairro: "Centro",
-      cidade: "demerval lobão - pi",
+      cidade: "monsenhor gil - pi",
     },
     valormindely: 15,
     status: { status: "fechado", desc: "fechado agora" },
