@@ -39,3 +39,39 @@ let restaurante = [
     capa: "	https://deliverydl.com.br/uploads/images/2021/10/images-68.jpeg",
   },
 ];
+
+let sliderOpcoes = [
+  {
+    img: 'assets/imagens/carrossel-burguer.jpg',
+    nome: 'Hamburguer',
+  },
+  {
+    img: 'assets/imagens/carrossel-pizza.webp',
+    nome: 'Pizza',
+  },
+  {
+    img: 'assets/imagens/carrossel-comida.jpg',
+    nome: 'Comida',
+  },
+  {
+    img: 'assets/imagens/carrossel-doces.webp',
+    nome: 'Doces',
+  },
+  {
+    img: 'assets/imagens/carrossel-sucos.webp',
+    nome: 'Sucos e Refri',
+  },
+  {
+    img: 'assets/imagens/carrossel-bebidas.webp',
+    nome: 'Bebidas',
+  },
+  {
+    img: 'assets/imagens/carrossel-acai.jpg',
+    nome: 'Açai',
+  },
+  {
+    img: 'assets/imagens/carrossel-salgados.webp',
+    nome: 'Salgados',
+  },
+
+]
