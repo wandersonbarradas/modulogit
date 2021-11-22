@@ -3,6 +3,8 @@ let cs = (el) => document.querySelectorAll(el);
 
 let modalkey = 0;
 
+
+
 restaurante.map((item, index) => {
   let cadastro = c(".models .container-res").cloneNode(true);
 
@@ -16,9 +18,40 @@ restaurante.map((item, index) => {
   cadastro.querySelector(
     ".valordely-res span"
   ).innerHTML = `R$ ${item.valormindely.toFixed(2)}`;
-  cadastro.querySelector(".status-res").innerHTML = item.status.desc;
-  cadastro.querySelector(".status-res").classList.add(item.status.status);
+  let statusfunciona = cadastro.querySelector(".status-res");
 
+  function verificação(time) {
+    let data = new Date();
+    let diaSemana = data.getDay();
+    
+
+    if(time >= item.hf[diaSemana].de && time < item.hf[diaSemana].as || time >= item.hf[diaSemana].oude && time < item.hf[diaSemana].ouas) {
+      statusfunciona.innerHTML = 'Aberto Agora';
+      statusfunciona.classList.remove('fechado');
+      statusfunciona.classList.add('aberto');
+    }else {
+      statusfunciona.innerHTML = 'Fechado Agora';
+      statusfunciona.classList.remove('aberto');
+      statusfunciona.classList.add('fechado');
+    }
+  }
+
+  function updateTime() {
+    let data = new Date();
+    let hora = data.getHours();
+    let minutos = data.getMinutes();
+
+    let datahf =  `${fixZero(hora)}:${fixZero(minutos)}`;
+
+    verificação(datahf)
+  };
+
+  function fixZero(time) {
+    return time < 10 ? `0${time}` : time;     
+  }
+
+  setInterval(updateTime, 1000);
+  updateTime();
   //Abrindo modal
   cadastro.querySelector("a").addEventListener("click", (e) => {
     e.preventDefault();
@@ -29,11 +62,41 @@ restaurante.map((item, index) => {
     c(".capa-modal").style.backgroundSize = "cover";
     c(".logo-res-modal").src = restaurante[key].img;
     c(".nome-res-modal").innerHTML = restaurante[key].nome;
-    c(".content-main-modal .status-res").innerHTML =
-      restaurante[key].status.desc;
-    c(".content-main-modal .status-res").classList.add(
-      restaurante[key].status.status
-    );
+    let statusfunciona = c(".content-main-modal .status-res");
+
+    function verificação(time) {
+    let data = new Date();
+    let diaSemana = data.getDay();
+    
+
+      if(time >= item.hf[diaSemana].de && time < item.hf[diaSemana].as || time >= item.hf[diaSemana].oude && time < item.hf[diaSemana].ouas) {
+        statusfunciona.innerHTML = 'Aberto Agora';
+        statusfunciona.classList.remove('fechado');
+        statusfunciona.classList.add('aberto');
+      }else {
+        statusfunciona.innerHTML = 'Fechado Agora';
+        statusfunciona.classList.remove('aberto');
+        statusfunciona.classList.add('fechado');
+      }
+    }
+
+    function updateTime() {
+      let data = new Date();
+      let hora = data.getHours();
+      let minutos = data.getMinutes();
+
+      let datahf =  `${fixZero(hora)}:${fixZero(minutos)}`;
+
+      verificação(datahf)
+    };
+
+    function fixZero(time) {
+      return time < 10 ? `0${time}` : time;     
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
 
     ocultarInicio();
     load();
@@ -44,6 +107,11 @@ restaurante.map((item, index) => {
       subirTela();
       c(".modal-res").style.opacity = "1";
     }, 3000);
+
+
+    
+
+
   });
 
   c(".container-cadastros").append(cadastro);
@@ -110,3 +178,8 @@ function subirTela() {
     top: 0,
   });
 }
+
+
+
+
+  

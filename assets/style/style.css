@@ -378,6 +378,188 @@ body {
   margin-right: 5px;
 }
 
+section.painel {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all ease .5s;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  transition: all 0.5s ease-out;
+}
+
+.painel-modal {
+  width: 900px;
+  height: auto;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.painel-modal h1 {
+  text-transform: capitalize;
+  font-size: 24px;
+  margin: 10px;  
+}
+
+.container-info-painel {
+  width: 720px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.container-info-painel h3{
+  font-size: 18px;
+}
+
+.painel-info-form {
+  display: flex;
+  margin-top: 17px;
+}
+
+.box-info-form {
+  width: 360px;
+  font-size: 14px;
+  color: #524A4A;
+  text-align: center;
+}
+
+#form-cadastro-rest {
+  width: 720px;
+  height: auto;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  display: flex;
+}
+
+.box-content-form {
+  width: 360px;
+  height: auto;
+  border: 1px solid #CCCCCC;
+}
+
+.box-content-form:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.box-content-form:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+.inputs {
+  width: 340px;
+  height: 42px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
+  outline: none;
+  text-align: center;
+}
+
+.inputs:focus,
+.inputs:hover {
+  border: solid 1px rgb(25, 169, 212);
+}
+
+.inputs::placeholder {
+  color: #FF6060;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.box-endereco-form {
+  width: 340px;
+  margin: auto;
+  padding: 0px 0px 10px 0px;
+  margin: 10px 10px 0px 10px;
+  border-radius: 5px;
+  border: 1px solid #CCCCCC;
+}
+
+.box-endereco-form .inputs,
+.box-endereco-form select {
+  margin: 9px 9px 0px 9px;
+}
+
+.line-endereco-form {
+  display: flex;
+}
+
+#rua {
+  width: 240px;
+}
+
+#numero {
+  width: 74px;
+  margin-left: 0;
+}
+
+#bairro,
+#cidade {
+  width: 157px;
+  margin-right: 7px;
+}
+
+#cidade {
+  width: 157px;
+  margin-left: 0;
+  margin-right: 8px;
+  color: #FF6060;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#status {
+  color: #FF6060;
+  margin-bottom: 10px;
+}
+
+.box-img-form {
+  border-radius: 5px;
+  border: 1px solid #CCCCCC;
+  width: 100px;
+  height: 85px;
+  margin: auto;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #FF6060;
+}
+
+.box-img-form img {
+  height: inherit;
+  width: inherit;
+}
+
+#bt-cadastrar {
+  margin: 20px;
+  background-color: #ff0000;
+  color: #FFF;
+  border-radius: 10px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /*Style do responsivo*/
 @media (max-width: 1100px) {
   .container-slider {

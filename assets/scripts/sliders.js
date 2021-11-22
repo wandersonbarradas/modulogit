@@ -33,4 +33,5 @@ function updateMargin() {
   let newMargin = (currentSlide * larguraslideitem + 10)
   c('.sliders--width').style.marginLeft = `-${newMargin}px`
 }
+
 setInterval(goNext, 5000);

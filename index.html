@@ -167,11 +167,66 @@
             </div>
         </div>
     </div>
+    <section class="painel">
+        <div class="painel-modal">
+            <h1>Seja Nosso Parceiro</h1>
+            <div class="container-info-painel">
+                <h3>Informações sobre o seu restaurante</h3>
+                <div class="painel-info-form">
+                    <div class="box-info-form">Informações Principais</div>
+                    <div class="box-info-form">Imagens do seu restaurante</div>
+                </div>
+            </div>
+            <form id="form-cadastro-rest" action="">
+                <div class="box-content-form">
+                    <input class="inputs" type="text" id="name" placeholder="Nome do estabelecimento">
+                    <div class="box-endereco-form">
+                        <div class="line-endereco-form">
+                            <input class="inputs" type="text" id="rua" placeholder="Rua">
+                            <input class="inputs" type="text" id="numero" placeholder="N°">
+                        </div>
+                        <div class="line-endereco-form">
+                            <input class="inputs" type="text" id="bairro" placeholder="Bairro">
+                            <select class="inputs" name="cidade" id="cidade">
+                                <option value="default">Cidade</option>
+                                <option value="demerval lobão - pi">Demerval Lobão - PI</option>
+                                <option value="monsenhor gil - pi">Monsenhor Gil - PI</option>
+                                <option value="lagoa do piaui">Lagoa Do Piaui</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input class="inputs" type="number" id="valordelivery" placeholder="Valor minino do delivery">
+                    <select class="inputs" name="status" id="status">
+                        <option value="default">Status</option>
+                        <option value="aberto">Aberto</option>
+                        <option value="fechado">Fechado</option>
+                    </select>
+                </div>
+                <div class="box-content-form">
+                    <input class="inputs" type="url" id="imgperfil" placeholder="Imagem do perfil (Link)">
+                    <div id="newimgperfil" class="box-img-form">
+                        Imagem
+                    </div>
+                    <input class="inputs" type="url" id="imgcapa" placeholder="Imagem do perfil (Link)">
+                    <div id="newimgcapa" class="box-img-form">
+                        Imagem
+                    </div>
+                </div>
+            </form>
+            <div class="box-form-button">
+                <button id="bt-cadastrar">Cadastrar Restaurante</button>
+            </div>
+
+        </div>
+
+    </section>
+
 
     <script src="assets/scripts/restaurantes.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/pesquisaCidade.js"></script>
     <script src="assets/scripts//sliders.js"></script>
+    <script src="assets/scripts//painel.js"></script>
 </body>
 
 </html>
