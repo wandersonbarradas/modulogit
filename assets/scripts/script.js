@@ -3,8 +3,6 @@ let cs = (el) => document.querySelectorAll(el);
 
 let modalkey = 0;
 
-
-
 restaurante.map((item, index) => {
   let cadastro = c(".models .container-res").cloneNode(true);
 
@@ -62,6 +60,10 @@ restaurante.map((item, index) => {
     c(".capa-modal").style.backgroundSize = "cover";
     c(".logo-res-modal").src = restaurante[key].img;
     c(".nome-res-modal").innerHTML = restaurante[key].nome;
+    c('.horario-res-modal').addEventListener('click', ()=>{
+      abrirModalHorario();
+
+    } )
     let statusfunciona = c(".content-main-modal .status-res");
 
     function verificação(time) {
@@ -179,6 +181,18 @@ function subirTela() {
   });
 }
 
+
+//Modal horarios
+
+function abrirModalHorario() {
+  c(".modal--horarios").style.opacity = "0";
+  c(".modal--horarios").style.display = "flex";
+  setInterval(() => {
+    c(".modal--horarios").style.opacity = "1";
+    c('.modal-horios-info').style.height = '60vh';
+  }, 200);
+  console.log('ok')
+}
 
 
 

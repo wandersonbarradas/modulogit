@@ -274,8 +274,8 @@ body {
 }
 
 .fechado {
-  background-color: #ff0000;
-  border: 1px solid #ff0000;
+  background-color: #ab0000;
+  border: 1px solid #ab0000;
 }
 
 /* Style do Modal*/
@@ -370,6 +370,50 @@ body {
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  margin: 0 10px;
+}
+
+.horario-res-modal--loc::after {
+  content: "";
+  display: inline-block;
+  margin-left: 10px;
+  width: 0; 
+  height: 0; 
+  transform: rotate(135deg);
+  border-bottom: 10px solid transparent; 
+  border-right: 10px solid #FFF;
+}
+
+.modal--horarios {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all ease .5s;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  transition: all 0.5s ease-out;
+}
+
+.modal-horios-info {
+  margin-top: 50px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
+  height: 0;
+  background-color: #FFF;
+  transition: all 0.5s ease-out;
+  border-radius: 7px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
 }
 
 .h-6 {
@@ -550,7 +594,7 @@ section.painel {
 
 #bt-cadastrar {
   margin: 20px;
-  background-color: #ff0000;
+  background-color: #ab0000;
   color: #FFF;
   border-radius: 10px;
   padding: 10px 20px;
@@ -776,7 +820,7 @@ section.painel {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #ff0000;
+  background-color: #ab0000;
 }
 
 .spinner {
@@ -862,20 +906,20 @@ section.painel {
 @keyframes sk {
   1% {
     top: -15px;
-    background: #ff0000;
+    background: #ab0000;
   }
   2% {
     top: 10px;
-    background: #ff0000;
+    background: #ab0000;
   }
   5% {
     top: -20px;
-    background: #ff0000;
+    background: #ab0000;
   }
   10% {
     left: -10px;
 
-    background: #ff0000;
+    background: #ab0000;
   }
   20% {
     top: -25px;
