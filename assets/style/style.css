@@ -392,13 +392,14 @@ body {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: all ease .5s;
   display: none;
   justify-content: center;
   align-items: flex-start;
   overflow-y: auto;
   transition: all 0.5s ease-out;
+  padding: 0 25px;
 }
 
 .modal-horios-info {
@@ -408,12 +409,45 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  width: 50vw;
-  height: 0;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
   background-color: #FFF;
   transition: all 0.5s ease-out;
   border-radius: 7px;
   box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+  z-index: 9;
+  transform: translateY(-100vh);
+  padding-bottom: 20px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center h3{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #ab0000;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.center h4 {
+  font-size: 14px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.center p {
+  background-color: #efefef;
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0px;
+  text-transform: none;
 }
 
 .h-6 {
@@ -801,7 +835,17 @@ section.painel {
   }
 }
 
+@media (max-width: 330px) {
+  .center h3{
+    font-size: 20px;
+  }
+}
+ 
 @media (max-width: 300px) {
+  .center h3{
+    font-size: 18px;
+  }
+
   .main-section-header h1 {
     font-size: 15px;
   }

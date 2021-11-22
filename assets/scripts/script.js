@@ -21,16 +21,18 @@ restaurante.map((item, index) => {
   function verificação(time) {
     let data = new Date();
     let diaSemana = data.getDay();
-    
 
-    if(time >= item.hf[diaSemana].de && time < item.hf[diaSemana].as || time >= item.hf[diaSemana].oude && time < item.hf[diaSemana].ouas) {
-      statusfunciona.innerHTML = 'Aberto Agora';
-      statusfunciona.classList.remove('fechado');
-      statusfunciona.classList.add('aberto');
-    }else {
-      statusfunciona.innerHTML = 'Fechado Agora';
-      statusfunciona.classList.remove('aberto');
-      statusfunciona.classList.add('fechado');
+    if (
+      (time >= item.hf[diaSemana].de && time < item.hf[diaSemana].as) ||
+      (time >= item.hf[diaSemana].oude && time < item.hf[diaSemana].ouas)
+    ) {
+      statusfunciona.innerHTML = "Aberto Agora";
+      statusfunciona.classList.remove("fechado");
+      statusfunciona.classList.add("aberto");
+    } else {
+      statusfunciona.innerHTML = "Fechado Agora";
+      statusfunciona.classList.remove("aberto");
+      statusfunciona.classList.add("fechado");
     }
   }
 
@@ -39,13 +41,13 @@ restaurante.map((item, index) => {
     let hora = data.getHours();
     let minutos = data.getMinutes();
 
-    let datahf =  `${fixZero(hora)}:${fixZero(minutos)}`;
+    let datahf = `${fixZero(hora)}:${fixZero(minutos)}`;
 
-    verificação(datahf)
-  };
+    verificação(datahf);
+  }
 
   function fixZero(time) {
-    return time < 10 ? `0${time}` : time;     
+    return time < 10 ? `0${time}` : time;
   }
 
   setInterval(updateTime, 1000);
@@ -60,25 +62,51 @@ restaurante.map((item, index) => {
     c(".capa-modal").style.backgroundSize = "cover";
     c(".logo-res-modal").src = restaurante[key].img;
     c(".nome-res-modal").innerHTML = restaurante[key].nome;
-    c('.horario-res-modal').addEventListener('click', ()=>{
+    c(
+      ".dom"
+    ).innerHTML = `${restaurante[key].hf[0].de} ás ${restaurante[key].hf[0].as}`;
+    c(
+      ".seg"
+    ).innerHTML = `${restaurante[key].hf[1].de} ás ${restaurante[key].hf[1].as}`;
+    c(
+      ".ter"
+    ).innerHTML = `${restaurante[key].hf[2].de} ás ${restaurante[key].hf[2].as}`;
+    c(
+      ".qua"
+    ).innerHTML = `${restaurante[key].hf[3].de} ás ${restaurante[key].hf[3].as}`;
+    c(
+      ".qui"
+    ).innerHTML = `${restaurante[key].hf[4].de} ás ${restaurante[key].hf[4].as}`;
+    c(
+      ".sex"
+    ).innerHTML = `${restaurante[key].hf[5].de} ás ${restaurante[key].hf[5].as}`;
+    c(
+      ".sab"
+    ).innerHTML = `${restaurante[key].hf[6].de} ás ${restaurante[key].hf[6].as}`;
+    c(".horario-res-modal").addEventListener("click", () => {
       abrirModalHorario();
+    });
 
-    } )
+    c(".modal--horarios").addEventListener("click", () => {
+      fecharModalHorario();
+    });
     let statusfunciona = c(".content-main-modal .status-res");
 
     function verificação(time) {
-    let data = new Date();
-    let diaSemana = data.getDay();
-    
+      let data = new Date();
+      let diaSemana = data.getDay();
 
-      if(time >= item.hf[diaSemana].de && time < item.hf[diaSemana].as || time >= item.hf[diaSemana].oude && time < item.hf[diaSemana].ouas) {
-        statusfunciona.innerHTML = 'Aberto Agora';
-        statusfunciona.classList.remove('fechado');
-        statusfunciona.classList.add('aberto');
-      }else {
-        statusfunciona.innerHTML = 'Fechado Agora';
-        statusfunciona.classList.remove('aberto');
-        statusfunciona.classList.add('fechado');
+      if (
+        (time >= item.hf[diaSemana].de && time < item.hf[diaSemana].as) ||
+        (time >= item.hf[diaSemana].oude && time < item.hf[diaSemana].ouas)
+      ) {
+        statusfunciona.innerHTML = "Aberto Agora";
+        statusfunciona.classList.remove("fechado");
+        statusfunciona.classList.add("aberto");
+      } else {
+        statusfunciona.innerHTML = "Fechado Agora";
+        statusfunciona.classList.remove("aberto");
+        statusfunciona.classList.add("fechado");
       }
     }
 
@@ -87,33 +115,27 @@ restaurante.map((item, index) => {
       let hora = data.getHours();
       let minutos = data.getMinutes();
 
-      let datahf =  `${fixZero(hora)}:${fixZero(minutos)}`;
+      let datahf = `${fixZero(hora)}:${fixZero(minutos)}`;
 
-      verificação(datahf)
-    };
+      verificação(datahf);
+    }
 
     function fixZero(time) {
-      return time < 10 ? `0${time}` : time;     
+      return time < 10 ? `0${time}` : time;
     }
 
     setInterval(updateTime, 1000);
     updateTime();
 
-
     ocultarInicio();
     load();
     c(".modal-res").style.opacity = "0";
     c(".modal-res").style.display = "block";
-    setInterval(() => {
+    setTimeout(() => {
       c(".container-animation").style.display = "none";
       subirTela();
       c(".modal-res").style.opacity = "1";
     }, 3000);
-
-
-    
-
-
   });
 
   c(".container-cadastros").append(cadastro);
@@ -153,7 +175,7 @@ function menuModalShow() {
 function abrirModalRes() {
   c(".modal-res").style.opacity = "0";
   c(".modal-res").style.display = "block";
-  setInterval(() => {
+  setTimeout(() => {
     c(".modal-res").style.opacity = "1";
   }, 2000);
 }
@@ -161,7 +183,7 @@ function abrirModalRes() {
 function ocultarInicio() {
   c(".section-header").style.opacity = "0";
   c(".restaurantes").style.opacity = "0";
-  setInterval(() => {
+  setTimeout(() => {
     c(".section-header").style.display = "none";
     c(".restaurantes").style.display = "none";
   }, 500);
@@ -170,7 +192,7 @@ function ocultarInicio() {
 function load() {
   c(".container-animation").style.opacity = "0";
   c(".container-animation").style.display = "flex";
-  setInterval(() => {
+  setTimeout(() => {
     c(".container-animation").style.opacity = "1";
   }, 500);
 }
@@ -181,19 +203,22 @@ function subirTela() {
   });
 }
 
-
 //Modal horarios
 
 function abrirModalHorario() {
+  let dias = cs(".center h4");
   c(".modal--horarios").style.opacity = "0";
   c(".modal--horarios").style.display = "flex";
-  setInterval(() => {
+  setTimeout(() => {
     c(".modal--horarios").style.opacity = "1";
-    c('.modal-horios-info').style.height = '60vh';
+    c(".modal-horios-info").style.transform = "translateY(0)";
   }, 200);
-  console.log('ok')
 }
 
-
-
-  
+function fecharModalHorario() {
+  c(".modal-horios-info").style.transform = "translateY(-100vh)";
+  c(".modal--horarios").style.opacity = "0";
+  setTimeout(() => {
+    c(".modal--horarios").style.display = "none";
+  }, 200);
+}
